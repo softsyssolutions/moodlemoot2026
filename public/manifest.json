@@ -1,0 +1,17 @@
+{
+  "id": "/",
+  "name": "MoodleMoot Perú 2026",
+  "short_name": "MoodleMoot PE",
+  "description": "El encuentro Moodle más grande del Perú",
+  "lang": "es",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0f172a",
+  "theme_color": "#f39c12",
+  "icons": [
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

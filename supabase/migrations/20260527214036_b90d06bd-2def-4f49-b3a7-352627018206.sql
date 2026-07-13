@@ -1,0 +1,1 @@
+TRUNCATE TABLE public.check_in_events, public.payments, public.event_registrations, public.chatbot_leads, public.notification_subscribers RESTART IDENTITY;

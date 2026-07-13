@@ -1,0 +1,54 @@
+project_id = "glrdxhpsesiqwqudacxe"
+[functions.event-chat]
+verify_jwt = false
+
+[functions.register-event]
+verify_jwt = false
+
+[functions.validate-coupon]
+verify_jwt = false
+
+[functions.create-paypal-order]
+verify_jwt = false
+
+[functions.capture-paypal-order]
+verify_jwt = false
+
+[functions.paypal-webhook]
+verify_jwt = false
+
+[functions.issue-ticket]
+verify_jwt = false
+
+[functions.upload-education-id]
+verify_jwt = false
+
+[functions.paypal-config]
+verify_jwt = false
+
+[functions.get-ticket]
+verify_jwt = false
+
+[functions.save-push-subscription]
+verify_jwt = false
+
+[functions.portal-get]
+verify_jwt = false
+
+[functions.portal-save]
+verify_jwt = false
+
+[functions.portal-upload]
+verify_jwt = false
+
+[functions.send-portal-reminder]
+verify_jwt = true
+
+[functions.portal-approve]
+verify_jwt = true
+
+[functions.send-portal-invitation]
+verify_jwt = true
+
+[functions.notify-admins-portal-complete]
+verify_jwt = false

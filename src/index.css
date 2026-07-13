@@ -1,0 +1,385 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Sansation";
+  src: url("/fonts/sansation/Sansation-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sansation";
+  src: url("/fonts/sansation/Sansation-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sansation";
+  src: url("/fonts/sansation/Sansation-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sansation";
+  src: url("/fonts/sansation/Sansation-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sansation";
+  src: url("/fonts/sansation/Sansation-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sansation";
+  src: url("/fonts/sansation/Sansation-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    /* Brand palette — Manual Gráfico MoodlePE26
+       Primario: UMCH #1f60b1 · IE #111222 · Moodle #ff8b00
+       Secundario: Gris Oscuro #3b3b3b · Amarillo UMCH #fada12 · Gris BG #ececec · Bronce #ffcfa1 */
+    --background: 0 0% 100%;
+    --foreground: 236 36% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 236 36% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 236 36% 10%;
+
+    --primary: 33 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 211 71% 41%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 92%;
+    --muted-foreground: 0 0% 23%;
+
+    --accent: 52 95% 53%;
+    --accent-foreground: 236 36% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 33 100% 50%;
+
+    /* Manual gráfico MoodlePE26 */
+    --brand-orange: 27 95% 53%;     /* #F98012 Moodle */
+    --brand-ink: 222 67% 12%;       /* #0B1631 Navy */
+    --brand-navy: 222 67% 12%;
+    --brand-bg: 0 0% 93%;           /* #ECECEC */
+    --brand-bronze: 30 27% 41%;     /* #86684C */
+    --brand-yellow: 25 100% 82%;    /* #FFC8A1 amarillo UMCH */
+    --brand-dark: 0 0% 13%;         /* #212121 */
+
+    /* Bento Speakers — flyer "Speed Up" inspired */
+    --bento-bg: 210 55% 10%;          /* deep navy */
+    --bento-card: 210 45% 16%;        /* mid navy */
+    --bento-accent: 178 60% 49%;      /* turquoise #26d0ce */
+    --bento-accent-soft: 178 55% 78%; /* pale turquoise */
+
+    --radius: 1.25rem;
+
+    /* Sidebar tokens (shadcn sidebar) */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 236 36% 10%;
+    --sidebar-primary: 28 96% 53%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 236 36% 10%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 28 96% 53%;
+  }
+
+  .dark {
+    --background: 211 60% 6%;
+    --foreground: 30 30% 96%;
+
+    --card: 211 50% 9%;
+    --card-foreground: 30 30% 96%;
+
+    --popover: 211 50% 9%;
+    --popover-foreground: 30 30% 96%;
+
+    --primary: 28 96% 56%;
+    --primary-foreground: 211 100% 8%;
+
+    /* Secondary: deep navy in dark to keep block hierarchy (footer, sponsors, benefits)
+       coherent with dark theme — no jarring near-white panels. */
+    --secondary: 211 55% 14%;
+    --secondary-foreground: 30 30% 96%;
+
+    --muted: 211 40% 12%;
+    --muted-foreground: 30 15% 70%;
+
+    --accent: 28 96% 14%;
+    --accent-foreground: 28 96% 70%;
+
+    --destructive: 0 63% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 211 40% 16%;
+    --input: 211 40% 16%;
+    --ring: 28 96% 56%;
+
+    --sidebar-background: 211 50% 9%;
+    --sidebar-foreground: 30 30% 96%;
+    --sidebar-primary: 28 96% 56%;
+    --sidebar-primary-foreground: 211 100% 8%;
+    --sidebar-accent: 211 40% 14%;
+    --sidebar-accent-foreground: 30 30% 96%;
+    --sidebar-border: 211 40% 16%;
+    --sidebar-ring: 28 96% 56%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: "Sansation", system-ui, -apple-system, sans-serif;
+    font-feature-settings: "ss01", "cv11";
+    /* Fondo claro: gris radial suave del manual gráfico MoodlePE26 */
+    background-image: radial-gradient(ellipse at center, #FFFFFF 0%, #F4F4F4 55%, #E6E6E6 100%);
+    background-attachment: fixed;
+  }
+  .dark body {
+    /* En modo oscuro se respeta el bg-background del token */
+    background-image: none;
+  }
+  ::selection { background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); }
+}
+
+@layer utilities {
+  .font-display { font-family: "Sansation", system-ui, sans-serif; font-feature-settings: "ss01"; }
+  .font-mono { font-family: "Sansation", system-ui, sans-serif; letter-spacing: 0.02em; }
+  .font-sans { font-family: "Sansation", system-ui, sans-serif; }
+  .font-serif { font-family: "Sansation", system-ui, sans-serif; }
+
+  .text-display {
+    font-family: "Sansation", system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 0.92;
+  }
+
+  .text-gradient-primary {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(28 96% 70%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Grid background */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, hsl(var(--foreground) / 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--foreground) / 0.06) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+  .bg-grid-sm {
+    background-image:
+      linear-gradient(to right, hsl(var(--foreground) / 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--foreground) / 0.04) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  /* Subtle grain texture */
+  .bg-grain {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.6 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+  }
+
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 35s linear infinite;
+  }
+  .marquee-track-slow { animation: marquee 60s linear infinite; }
+
+  .animate-marquee {
+    animation: marquee 25s linear infinite;
+  }
+
+  /* Editorial number style */
+  .editorial-number {
+    font-family: "Sansation", system-ui, sans-serif;
+    font-weight: 900;
+    font-size: clamp(4rem, 12vw, 11rem);
+    line-height: 0.85;
+    letter-spacing: -0.06em;
+  }
+
+  .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .reveal-on-scroll.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .speaker-tile {
+    @apply relative overflow-hidden bg-secondary;
+  }
+  .speaker-tile img {
+    @apply absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out grayscale;
+  }
+  .speaker-tile:hover img { @apply grayscale-0 scale-105; }
+
+  .underline-grow {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0 1px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    transition: background-size 0.4s ease;
+  }
+  .underline-grow:hover { background-size: 100% 1px; }
+
+  /* Brand shape — soft rounded square per manual gráfico */
+  .shape-brand { border-radius: 1.25rem; }
+  .shape-brand-sm { border-radius: 0.875rem; }
+  .shape-brand-lg { border-radius: 1.75rem; }
+
+  @keyframes floaty {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50%      { transform: translateY(-14px) rotate(2deg); }
+  }
+  @keyframes floaty-rev {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50%      { transform: translateY(12px) rotate(-3deg); }
+  }
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+  @keyframes marquee-reverse {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0%); }
+  }
+  .marquee-track-reverse {
+    display: flex;
+    width: max-content;
+    animation: marquee-reverse 40s linear infinite;
+  }
+  .animate-floaty     { animation: floaty 8s ease-in-out infinite; }
+  .animate-floaty-rev { animation: floaty-rev 10s ease-in-out infinite; }
+}
+
+/* ===== SplashScreen animations ===== */
+@keyframes splash-grid-pan {
+  0%   { background-position: 0 0, 0 0; }
+  100% { background-position: 40px 40px, 40px 40px; }
+}
+.splash-grid {
+  background-image:
+    linear-gradient(hsl(22 95% 53% / 0.35) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(22 95% 53% / 0.35) 1px, transparent 1px);
+  background-size: 40px 40px, 40px 40px;
+  animation: splash-grid-pan 6s linear infinite;
+  mask-image: radial-gradient(circle at center, black 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 75%);
+}
+
+@keyframes splash-glow-pulse {
+  0%, 100% { opacity: 0.6; }
+  50%      { opacity: 1; }
+}
+.splash-glow { animation: splash-glow-pulse 1.8s ease-in-out infinite; }
+
+.splash-scanlines {
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 2px,
+    hsl(0 0% 100% / 0.04) 2px,
+    hsl(0 0% 100% / 0.04) 3px
+  );
+  mix-blend-mode: overlay;
+}
+
+@keyframes splash-logo-reveal {
+  0%   { opacity: 0; transform: scale(0.88); filter: blur(14px) brightness(1.4); }
+  35%  { opacity: 1; filter: blur(6px) brightness(1.2); }
+  70%  { opacity: 1; transform: scale(0.98); filter: blur(0) brightness(1.05); }
+  100% { opacity: 1; transform: scale(1);    filter: blur(0) brightness(1); }
+}
+.splash-logo-reveal {
+  animation: splash-logo-reveal 1.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  filter: drop-shadow(0 0 24px hsl(22 95% 53% / 0.45));
+}
+
+@keyframes splash-logo-fade {
+  0% { opacity: 0; } 100% { opacity: 1; }
+}
+.splash-logo-fade { animation: splash-logo-fade 0.4s ease-out both; }
+
+@keyframes splash-glitch-r {
+  0%, 100% { transform: translate(0, 0); opacity: 0; }
+  10%      { transform: translate(-6px, 2px); opacity: 0.7; }
+  25%      { transform: translate(4px, -2px); opacity: 0.6; }
+  40%      { transform: translate(-3px, 0); opacity: 0.5; }
+  60%      { transform: translate(2px, 1px); opacity: 0.3; }
+  80%      { transform: translate(0, 0); opacity: 0; }
+}
+.splash-glitch-r {
+  animation: splash-glitch-r 1.2s steps(2, end) 1 both;
+  /* drop-shadow is GPU-expensive on mobile; cheap red tint via mix-blend parent + transform only */
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  opacity: 0;
+}
+
+@keyframes splash-glitch-b {
+  0%, 100% { transform: translate(0, 0); opacity: 0; }
+  10%      { transform: translate(6px, -2px); opacity: 0.7; }
+  25%      { transform: translate(-4px, 2px); opacity: 0.6; }
+  40%      { transform: translate(3px, 0); opacity: 0.5; }
+  60%      { transform: translate(-2px, -1px); opacity: 0.3; }
+  80%      { transform: translate(0, 0); opacity: 0; }
+}
+.splash-glitch-b {
+  animation: splash-glitch-b 1.2s steps(2, end) 1 both;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  opacity: 0;
+}
+
+@media (max-width: 640px) {
+  /* Lighter grid on mobile: bigger cells = fewer pixels to paint */
+  .splash-grid { background-size: 64px 64px, 64px 64px; }
+  .splash-scanlines { display: none; }
+}
+
+@keyframes splash-flash {
+  0%, 80% { opacity: 0; }
+  85%     { opacity: 0.7; }
+  100%    { opacity: 0; }
+}
+.splash-flash {
+  background: hsl(0 0% 100%);
+  animation: splash-flash 1.8s ease-out both;
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .splash-grid, .splash-glow, .splash-scanlines, .splash-flash,
+  .splash-glitch-r, .splash-glitch-b { animation: none !important; }
+  .splash-logo-reveal { animation: splash-logo-fade 0.4s ease-out both; filter: none; }
+}

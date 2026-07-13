@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MoodleMoot Perú 2026 — El encuentro Moodle más grande del Perú</title>
+    <meta name="description" content="MoodleMoot Perú 2026 · 18-19 Septiembre · Universidad Marcelino Champagnat, Lima · Híbrido. Educadores, desarrolladores y líderes EdTech." />
+    <meta name="author" content="MoodleMoot Perú" />
+    <meta name="google-site-verification" content="lwa4nh12ASBOHKXVTFcMSXOpV4RVC9gCZmyyhQCh8xM" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "MoodleMoot Perú",
+        "alternateName": "MoodleMoot Perú 2026",
+        "url": "https://moodlemootperu.com/",
+        "logo": "https://moodlemootperu.com/favicon-192.png"
+      }
+    </script>
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#f39c12" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="MoodleMoot PE" />
+
+    <meta property="og:title" content="MoodleMoot Perú 2026" />
+    <meta property="og:description" content="18-19 Septiembre 2026 · Universidad Marcelino Champagnat, Lima · Híbrido. El encuentro Moodle más grande del Perú." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "xb8t5rm3rl");
+    </script>
+
+    <!-- Splash preload -->
+    <link rel="preload" as="image" href="/moodlemoot-logo-2026.png" fetchpriority="high" />
+    <style>
+      /* ---- Critical splash CSS (vanilla, runs before React hydrates) ---- */
+      html, body { background-color: #0B1631; margin: 0; }
+
+      #mm-splash {
+        position: fixed; inset: 0; z-index: 99999;
+        display: flex; align-items: center; justify-content: center;
+        background: #0B1631;
+        transition: opacity .5s ease-out;
+      }
+      #mm-splash.mm-hide { opacity: 0; pointer-events: none; visibility: hidden; }
+
+      #mm-splash .mm-glow {
+        position: absolute; inset: 0;
+        background: radial-gradient(circle at center, rgba(249,128,18,.25) 0%, transparent 60%);
+        animation: mm-glow 1.8s ease-in-out infinite alternate;
+      }
+      @keyframes mm-glow { to { opacity: .55; } }
+
+      #mm-splash .mm-stage {
+        position: relative; width: min(60vw, 360px); aspect-ratio: 1 / 1;
+        display: flex; align-items: center; justify-content: center;
+      }
+      #mm-splash .mm-stage img {
+        position: absolute; inset: 0; width: 100%; height: auto; margin: auto;
+        opacity: 0; transform: scale(.88);
+        will-change: transform, opacity;
+      }
+      #mm-splash .mm-base {
+        animation: mm-reveal 1.6s cubic-bezier(.22,1,.36,1) forwards;
+        filter: drop-shadow(0 0 24px rgba(249,128,18,.35));
+      }
+      #mm-splash .mm-r {
+        mix-blend-mode: screen; opacity: .85;
+        animation: mm-glitch-r 1.2s steps(2) infinite;
+      }
+      #mm-splash .mm-b {
+        mix-blend-mode: screen; opacity: .85;
+        animation: mm-glitch-b 1.2s steps(2) infinite;
+      }
+      @keyframes mm-reveal {
+        0% { opacity: 0; transform: scale(.88); filter: blur(8px) drop-shadow(0 0 0 rgba(249,128,18,0)); }
+        60% { opacity: 1; filter: blur(0) drop-shadow(0 0 24px rgba(249,128,18,.35)); }
+        100% { opacity: 1; transform: scale(1); filter: blur(0) drop-shadow(0 0 24px rgba(249,128,18,.35)); }
+      }
+      @keyframes mm-glitch-r {
+        0%, 100% { transform: translate(0,0); opacity: 0; }
+        20% { transform: translate(-2px,1px); opacity: .6; }
+        40% { transform: translate(3px,-1px); opacity: .4; }
+        60% { transform: translate(-1px,2px); opacity: .55; }
+        80% { transform: translate(2px,0); opacity: 0; }
+      }
+      @keyframes mm-glitch-b {
+        0%, 100% { transform: translate(0,0); opacity: 0; }
+        20% { transform: translate(2px,-1px); opacity: .55; }
+        40% { transform: translate(-3px,1px); opacity: .4; }
+        60% { transform: translate(1px,-2px); opacity: .55; }
+        80% { transform: translate(-2px,0); opacity: 0; }
+      }
+      .mm-low #mm-splash .mm-r,
+      .mm-low #mm-splash .mm-b { display: none; }
+
+      @media (prefers-reduced-motion: reduce) {
+        #mm-splash .mm-base { animation: mm-fade .4s ease-out forwards; filter: none; }
+        #mm-splash .mm-r, #mm-splash .mm-b, #mm-splash .mm-glow { display: none; }
+        @keyframes mm-fade { to { opacity: 1; transform: none; } }
+      }
+    </style>
+    <script>
+      // ---- Vanilla splash controller: runs before any React code, defers hydration ----
+      (function () {
+        var t0 = performance.now();
+        var MIN = 1800;
+        var MAX = 6000;
+
+        // Low-end heuristic: skip glitch layers
+        try {
+          var nav = navigator;
+          var lowEnd =
+            (nav.deviceMemory && nav.deviceMemory <= 4) ||
+            (nav.hardwareConcurrency && nav.hardwareConcurrency <= 4) ||
+            (matchMedia('(pointer: coarse)').matches && innerWidth < 768);
+          if (lowEnd) document.documentElement.classList.add('mm-low');
+        } catch (e) {}
+
+        document.documentElement.classList.add('mm-splash-active');
+
+        // Promise gate: main.tsx awaits this before createRoot
+        var resolveReady;
+        window.__mmSplashReady = new Promise(function (res) { resolveReady = res; });
+
+        var done = false;
+        function finish() {
+          if (done) return; done = true;
+          var elapsed = performance.now() - t0;
+          var wait = Math.max(0, MIN - elapsed);
+          setTimeout(function () {
+            var el = document.getElementById('mm-splash');
+            if (el) el.classList.add('mm-hide');
+            // Hydrate React now (CPU freed from splash animation about to fade)
+            resolveReady();
+            // Remove after fade
+            setTimeout(function () {
+              if (el && el.parentNode) el.parentNode.removeChild(el);
+              var total = performance.now() - t0;
+              window.__mmSplashDuration = total;
+              try { console.info('[splash] total duration', Math.round(total), 'ms'); } catch(e){}
+            }, 550);
+          }, wait);
+        }
+
+        // Trigger when image decoded + DOM interactive
+        function whenImage(cb) {
+          var img = new Image();
+          img.src = '/moodlemoot-logo-2026.png';
+          if (img.decode) img.decode().then(cb).catch(cb);
+          else if (img.complete) cb();
+          else { img.onload = cb; img.onerror = cb; }
+        }
+        whenImage(function () {
+          if (document.readyState === 'complete' || document.readyState === 'interactive') finish();
+          else document.addEventListener('DOMContentLoaded', finish, { once: true });
+        });
+        // Safety net
+        setTimeout(finish, MAX);
+        // Skip on Escape / click
+        addEventListener('keydown', function (e) { if (e.key === 'Escape') finish(); });
+
+        // ---- Metrics: FCP, LCP, splash duration ----
+        window.__mmMetrics = { splashStart: t0 };
+        try {
+          var po = new PerformanceObserver(function (list) {
+            list.getEntries().forEach(function (e) {
+              if (e.name === 'first-contentful-paint') {
+                window.__mmMetrics.fcp = e.startTime;
+                console.info('[metrics] FCP', Math.round(e.startTime), 'ms');
+              }
+            });
+          });
+          po.observe({ type: 'paint', buffered: true });
+        } catch (e) {}
+        try {
+          var lcpVal = 0;
+          var lo = new PerformanceObserver(function (list) {
+            var entries = list.getEntries();
+            var last = entries[entries.length - 1];
+            if (last) lcpVal = last.startTime;
+          });
+          lo.observe({ type: 'largest-contentful-paint', buffered: true });
+          var report = function () {
+            if (window.__mmMetrics.lcp === lcpVal) return;
+            window.__mmMetrics.lcp = lcpVal;
+            console.info('[metrics] LCP', Math.round(lcpVal), 'ms');
+          };
+          addEventListener('visibilitychange', function () {
+            if (document.visibilityState === 'hidden') report();
+          });
+          addEventListener('pagehide', report);
+          setTimeout(report, 8000);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div id="mm-splash" aria-hidden="true" role="status" aria-label="Cargando MoodleMoot Perú 2026">
+      <div class="mm-glow"></div>
+      <div class="mm-stage">
+        <img class="mm-r" src="/moodlemoot-logo-2026.png" alt="" aria-hidden="true" />
+        <img class="mm-b" src="/moodlemoot-logo-2026.png" alt="" aria-hidden="true" />
+        <img class="mm-base" src="/moodlemoot-logo-2026.png" alt="MoodleMoot Perú 2026" />
+      </div>
+    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

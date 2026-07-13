@@ -1,0 +1,16 @@
+# MoodleMoot Perú 2026
+
+> Encuentro oficial de la comunidad Moodle en Perú: educadores, desarrolladores y líderes EdTech. 18 y 19 de septiembre de 2026, Universidad Marcelino Champagnat, Lima. Formato híbrido (presencial + virtual).
+
+MoodleMoot Perú 2026 reúne durante dos días a la comunidad Moodle de Latinoamérica para compartir buenas prácticas, casos de éxito, novedades del LMS, integraciones con IA en educación y experiencias de implementación institucional. El sitio publica la agenda, ponentes confirmados, patrocinadores, información de sede y un blog con noticias del evento.
+
+## Páginas
+
+- [Inicio](/): Información general del evento — fechas, sede, ponentes, agenda, patrocinadores y registro.
+- [Blog](/blog): Noticias, anuncios, alianzas y novedades de MoodleMoot Perú 2026.
+
+## Blog
+
+- [IA en Moodle: del aula al backend](/blog/ia-en-moodle-del-aula-al-backend): Cómo integrar inteligencia artificial en Moodle desde la experiencia del aula hasta la arquitectura técnica.
+- [Moodle 5 y la nueva era del LMS](/blog/moodle-5-nueva-era-lms): Novedades de Moodle 5, cambios de arquitectura y qué significan para administradores.
+- [Diseño instruccional para cursos en línea](/blog/diseno-instruccional-cursos-en-linea): Principios de diseño instruccional aplicados a cursos virtuales modernos.

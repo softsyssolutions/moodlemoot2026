@@ -1,0 +1,1 @@
+ALTER TABLE public.speaker_proposals ADD COLUMN IF NOT EXISTS published_speaker_id uuid;
